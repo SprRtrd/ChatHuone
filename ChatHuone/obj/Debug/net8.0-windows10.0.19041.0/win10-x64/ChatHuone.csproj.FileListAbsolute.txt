@@ -461,3 +461,4 @@ G:\Solution\ChatHuone\ChatHuone\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\p
 G:\Solution\ChatHuone\ChatHuone\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 G:\Solution\ChatHuone\ChatHuone\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 G:\Solution\ChatHuone\ChatHuone\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+G:\Solution\ChatHuone\ChatHuone\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ChatHuone.sourcelink.json
