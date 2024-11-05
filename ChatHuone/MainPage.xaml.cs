@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Net.WebSockets;
 
 namespace ChatHuone;
 
