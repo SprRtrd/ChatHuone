@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatHuone", "ChatHuone\ChatHuone.csproj", "{D482D1AA-19FB-4C3B-A7F8-5BDCEC716364}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "..\ChatServer\ChatServer.csproj", "{20AC7472-7572-42EE-87D2-922CEFBE633A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D482D1AA-19FB-4C3B-A7F8-5BDCEC716364}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D482D1AA-19FB-4C3B-A7F8-5BDCEC716364}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D482D1AA-19FB-4C3B-A7F8-5BDCEC716364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AC7472-7572-42EE-87D2-922CEFBE633A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AC7472-7572-42EE-87D2-922CEFBE633A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AC7472-7572-42EE-87D2-922CEFBE633A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AC7472-7572-42EE-87D2-922CEFBE633A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
