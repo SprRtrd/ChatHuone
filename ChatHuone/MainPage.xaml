@@ -4,9 +4,25 @@
              x:Class="ChatHuone.MainPage">
 
 <VerticalStackLayout>
-    <ListView>
-        
-    </ListView>
+    <CollectionView ItemsSource="">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column ="1"
+                        Text="{Binding TimeStamp}" />
+                    <Label Grid.Column ="2"
+                        Text="{Binding Nimi}" />
+                    <Label Grid.Column ="3"
+                        Text="{Binding Viesti}" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
     <Entry Placeholder="Kirjoita viestisi" />
     <Button Text="Lähetä" />
 </VerticalStackLayout>
