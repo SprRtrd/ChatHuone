@@ -14,7 +14,9 @@ public partial class MainPage : ContentPage
         _ = Yhdista();
 		List<Viesti> Viestit = new List<Viesti>();
 		Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
+		Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
 		Viestit.Add(Testi1);
+		Viestit.Add(Testi2);
 		DataCollectionView.ItemsSource = Viestit;
 		
 	}
