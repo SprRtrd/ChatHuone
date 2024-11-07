@@ -12,6 +12,11 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
         _ = Yhdista();
+		List<Viesti> Viestit = new List<Viesti>();
+		Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
+		Viestit.Add(Testi1);
+		DataCollectionView.ItemsSource = Viestit;
+		
 	}
 
 	static async Task Yhdista()

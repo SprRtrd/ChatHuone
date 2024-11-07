@@ -1,8 +1,8 @@
-using System.DateTime;
+
 namespace ChatHuone;
 
-class Viesti{
-    DateTime TimeStamp {get; set;}
-    string Nimi {get; set;}
-    string Viesti {get; set;} 
+public class Viesti{
+    public DateTime TimeStamp {get; set;}
+    public string Nimi {get; set;}
+    public string Teksti {get; set;}
 }

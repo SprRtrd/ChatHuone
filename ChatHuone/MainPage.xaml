@@ -4,7 +4,7 @@
              x:Class="ChatHuone.MainPage">
 
 <VerticalStackLayout>
-    <CollectionView ItemsSource="">
+    <CollectionView x:Name="DataCollectionView">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
@@ -18,7 +18,7 @@
                     <Label Grid.Column ="2"
                         Text="{Binding Nimi}" />
                     <Label Grid.Column ="3"
-                        Text="{Binding Viesti}" />
+                        Text="{Binding Teksti}" />
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>
