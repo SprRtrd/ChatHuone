@@ -41,18 +41,10 @@ public partial class MainPage : ContentPage
 		string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, receiveResult.Count);
 
 		Console.WriteLine($"Received message: {receivedMessage}");
-
-		/*try
-		{
-			string responseBody = await client.GetStringAsync("http://127.0.0.1:8080/");
-			System.Console.WriteLine(responseBody);
-		}
-		catch (HttpRequestException e)
-		{
-			System.Console.WriteLine("\nException Caught!");
-			System.Console.WriteLine($"Message :{e.Message}");
-		}*/
 	}
 
+	void OnClick1 (object sender, EventArgs e){
+		btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
+	}
 }
 

@@ -24,6 +24,6 @@
         </CollectionView.ItemTemplate>
     </CollectionView>
     <Entry Placeholder="Kirjoita viestisi" />
-    <Button Text="Lähetä" />
+    <Button x:Name = "btn1" Text="Lähetä" Clicked="OnClick1"/>
 </VerticalStackLayout>
 </ContentPage>
