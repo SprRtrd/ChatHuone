@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatHuone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+90da19e09dec52ac13c3a2ccd984a86e690d7487")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a7bb7ed9f6681397559f74a4cb78f65f210e9907")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatHuone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatHuone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

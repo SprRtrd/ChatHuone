@@ -13,11 +13,11 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column ="1"
+                    <Label Grid.Column ="0"
                         Text="{Binding TimeStamp}" />
-                    <Label Grid.Column ="2"
+                    <Label Grid.Column ="1"
                         Text="{Binding Nimi}" />
-                    <Label Grid.Column ="3"
+                    <Label Grid.Column ="2"
                         Text="{Binding Teksti}" />
                 </Grid>
             </DataTemplate>
