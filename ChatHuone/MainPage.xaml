@@ -4,7 +4,8 @@
              x:Class="ChatHuone.MainPage">
 
 <VerticalStackLayout>
-    <CollectionView x:Name="DataCollectionView">
+    <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshCommand}">
+    <CollectionView x:Name="DataCollectionView" MaximumHeightRequest="480" MinimumHeightRequest="480" ItemsUpdatingScrollMode="KeepLastItemInView">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
@@ -23,7 +24,9 @@
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
-    <Entry Placeholder="Kirjoita viestisi" />
+    </RefreshView>
+    <Entry x:Name ="ChatViesti" Placeholder="Kirjoita viestisi" />
     <Button x:Name = "btn1" Text="Lähetä" Clicked="OnClick1"/>
+    <Entry x:Name ="LNimi" Placeholder="Nimesi" />
 </VerticalStackLayout>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System.Collections.ObjectModel;
+using System.Net.Http;
 using System.Net.WebSockets;
 using System.Text;
 
@@ -7,7 +8,8 @@ namespace ChatHuone;
 public partial class MainPage : ContentPage
 {
 	static readonly HttpClient client = new();
-	List<Viesti> Viestit = new List<Viesti>();
+	ObservableCollection<Viesti> viestit = new();
+	ClientWebSocket ws = new();
 	public MainPage()
 	{
 		InitializeComponent();
@@ -15,17 +17,17 @@ public partial class MainPage : ContentPage
 		
 		Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
 		Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
-		Viestit.Add(Testi1);
-		Viestit.Add(Testi2);
-		//DataCollectionView.ItemsSource = Viestit;
+		viestit.Add(Testi1);
+		viestit.Add(Testi2);
+		DataCollectionView.ItemsSource = viestit;
 		
 	}
 
-	static async Task Yhdista()
+	async Task Yhdista()
 	{
 
-		using ClientWebSocket ws = new();
-
+		
+		// using ClientWebSocket ws = new();
 		Uri uri = new("ws://127.0.0.1:8080");
 		await ws.ConnectAsync(uri, CancellationToken.None);
 
@@ -45,10 +47,14 @@ public partial class MainPage : ContentPage
 
 	void OnClick1 (object sender, EventArgs e){
 		//btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
-		Viesti Testi3 = new() {TimeStamp = DateTime.Now, Nimi = "Olliuusi", Teksti = "Toimii"};
-		Viestit.Add(Testi3);
-		DataCollectionView.ItemsSource = null;
-		DataCollectionView.ItemsSource = Viestit;
+		Viesti testi3 = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
+		viestit.Add(testi3);
+		// LahetaViesti(testi3);
+		
 	}
+
+	/*async Task LahetaViesti (Viesti testi3){
+
+	}*/
 }
 
