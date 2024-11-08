@@ -7,17 +7,17 @@ namespace ChatHuone;
 public partial class MainPage : ContentPage
 {
 	static readonly HttpClient client = new();
-
+	List<Viesti> Viestit = new List<Viesti>();
 	public MainPage()
 	{
 		InitializeComponent();
         _ = Yhdista();
-		List<Viesti> Viestit = new List<Viesti>();
+		
 		Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
 		Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
 		Viestit.Add(Testi1);
 		Viestit.Add(Testi2);
-		DataCollectionView.ItemsSource = Viestit;
+		//DataCollectionView.ItemsSource = Viestit;
 		
 	}
 
@@ -44,7 +44,11 @@ public partial class MainPage : ContentPage
 	}
 
 	void OnClick1 (object sender, EventArgs e){
-		btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
+		//btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
+		Viesti Testi3 = new() {TimeStamp = DateTime.Now, Nimi = "Olliuusi", Teksti = "Toimii"};
+		Viestit.Add(Testi3);
+		DataCollectionView.ItemsSource = null;
+		DataCollectionView.ItemsSource = Viestit;
 	}
 }
 
