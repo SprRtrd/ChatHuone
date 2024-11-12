@@ -26,14 +26,23 @@ public partial class MainPage : ContentPage
 	async Task Yhdista()
 	{
 
-		
-		// using ClientWebSocket ws = new();
 		Uri uri = new("ws://127.0.0.1:8080");
 		await ws.ConnectAsync(uri, CancellationToken.None);
 
 		Console.WriteLine("Connected");
 
-		string message = "Hello from client!";
+	}
+
+	void OnClick1 (object sender, EventArgs e){
+		//btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
+		Viesti testi3 = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
+		viestit.Add(testi3);
+		_ = LahetaViesti(testi3);
+		
+	}
+
+	async Task LahetaViesti (Viesti testi3){
+		string message = testi3.Teksti;
 
 		byte[] buffer = Encoding.UTF8.GetBytes(message);
 		await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
@@ -44,17 +53,5 @@ public partial class MainPage : ContentPage
 
 		Console.WriteLine($"Received message: {receivedMessage}");
 	}
-
-	void OnClick1 (object sender, EventArgs e){
-		//btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
-		Viesti testi3 = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
-		viestit.Add(testi3);
-		// LahetaViesti(testi3);
-		
-	}
-
-	/*async Task LahetaViesti (Viesti testi3){
-
-	}*/
 }
 
