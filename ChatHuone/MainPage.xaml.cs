@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Net.WebSockets;
 using System.Text;
+using System.Text.Json;
 
 namespace ChatHuone;
 
@@ -34,7 +35,7 @@ public partial class MainPage : ContentPage
 	}
 
 	void OnClick1 (object sender, EventArgs e){
-		//btn1.BackgroundColor = Color.FromRgb(4, 4, 6);
+		
 		Viesti testi3 = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
 		viestit.Add(testi3);
 		_ = LahetaViesti(testi3);
@@ -42,9 +43,10 @@ public partial class MainPage : ContentPage
 	}
 
 	async Task LahetaViesti (Viesti testi3){
-		string message = testi3.Teksti;
+		
+		string jsonString = JsonSerializer.Serialize(testi3);
 
-		byte[] buffer = Encoding.UTF8.GetBytes(message);
+		byte[] buffer = Encoding.UTF8.GetBytes(jsonString);
 		await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);
 
 		byte[] receiveBuffer = new byte[1024];
