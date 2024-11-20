@@ -11,15 +11,18 @@ public partial class MainPage : ContentPage
 	static readonly HttpClient client = new();
 	ObservableCollection<Viesti> viestit = new();
 	ClientWebSocket ws = new();
+	static DatabaseHandler dbHandler = new();
 	public MainPage()
 	{
+		
 		InitializeComponent();
+		dbHandler.CreateDatabase();
         _ = Yhdista();
 		
-		Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
-		Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
-		viestit.Add(Testi1);
-		viestit.Add(Testi2);
+		// Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
+		// Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
+		// viestit.Add(Testi1);
+		// viestit.Add(Testi2);
 		DataCollectionView.ItemsSource = viestit;
 		
 	}
@@ -36,15 +39,15 @@ public partial class MainPage : ContentPage
 
 	void OnClick1 (object sender, EventArgs e){
 		
-		Viesti testi3 = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
-		viestit.Add(testi3);
-		_ = LahetaViesti(testi3);
-		
+		Viesti viesti = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
+		viestit.Add(viesti);
+		_ = LahetaViesti(viesti);
+		dbHandler.LisaaViesti(viesti);
 	}
 
-	async Task LahetaViesti (Viesti testi3){
+	async Task LahetaViesti (Viesti viesti){
 		
-		string jsonString = JsonSerializer.Serialize(testi3);
+		string jsonString = JsonSerializer.Serialize(viesti);
 
 		byte[] buffer = Encoding.UTF8.GetBytes(jsonString);
 		await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);

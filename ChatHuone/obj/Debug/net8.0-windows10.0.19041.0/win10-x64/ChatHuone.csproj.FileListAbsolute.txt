@@ -462,3 +462,17 @@ G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\M
 G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.System.winmd
 G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.Widgets.winmd
 G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.UI.Xaml.Controls.pri
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\EntityFramework.SqlServer.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\EntityFramework.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Microsoft.Win32.SystemEvents.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Data.SQLite.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.CodeDom.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Configuration.ConfigurationManager.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Data.SqlClient.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Data.SQLite.EF6.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Drawing.Common.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Cryptography.ProtectedData.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Security.Permissions.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Windows.Extensions.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\sni.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\SQLite.Interop.dll
