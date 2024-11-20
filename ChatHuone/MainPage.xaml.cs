@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
 		Viesti viesti = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
 		viestit.Add(viesti);
 		_ = LahetaViesti(viesti);
-		dbHandler.LisaaViesti(viesti);
+		
 	}
 
 	async Task LahetaViesti (Viesti viesti){
@@ -55,7 +55,7 @@ public partial class MainPage : ContentPage
 		byte[] receiveBuffer = new byte[1024];
 		WebSocketReceiveResult receiveResult = await ws.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
 		string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, receiveResult.Count);
-
+		// dbHandler.LisaaViesti(viesti);
 		Console.WriteLine($"Received message: {receivedMessage}");
 	}
 }

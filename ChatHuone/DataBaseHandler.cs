@@ -10,7 +10,7 @@ public class DatabaseHandler{
     public void CreateDatabase(){
         using (var connection = new SQLiteConnection(_connectionString)){
             connection.Open();
-            string query = "CREATE TABLE IF NOT EXISTS viestit (viesti_id INTEGER PRIMARY KEY, lahettaja TEXT, viesti TEXT, timestamp DATETIME)";
+            string query = "CREATE TABLE IF NOT EXISTS viestit (viesti_id INTEGER PRIMARY KEY, server_viesti_id INTEGER, lahettaja TEXT, viesti TEXT, timestamp DATETIME)";
             LuoPoyta(query, connection);
             connection.Close();
         }
