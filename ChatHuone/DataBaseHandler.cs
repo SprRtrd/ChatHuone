@@ -5,7 +5,7 @@ namespace ChatHuone;
 
 public class DatabaseHandler{
 
-    private string _connectionString = "Data Source=chat.db";
+    private string _connectionString = "DataSource=chathuone.db";
 
     public void CreateDatabase(){
         using (var connection = new SQLiteConnection(_connectionString)){
@@ -24,7 +24,7 @@ public class DatabaseHandler{
 
     public void LisaaViesti(Viesti viesti){
         string sqlFormattedDate = viesti.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss");
-        string query = $"INSERT INTO viestit (lahettaja, viesti, timestamp) VALUES(\"{viesti.Nimi}\", \"{viesti.Teksti}\", \"{viesti.TimeStamp}\")";
+        string query = $"INSERT INTO viestit (lahettaja, viesti, timestamp) VALUES(\'{viesti.Nimi}\', \'{viesti.Teksti}\', \'{sqlFormattedDate}\')";
 
         try{
             using (var connection = new SQLiteConnection(_connectionString)){
