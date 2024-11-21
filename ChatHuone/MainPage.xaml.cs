@@ -20,11 +20,8 @@ public partial class MainPage : ContentPage
 		int viestiCount = dbHandler.ViimeisinId();
 		System.Console.WriteLine(viestiCount);
         _ = Yhdista();
+		// ViestiVertaus(viestiCount);
 		
-		// Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
-		// Viesti Testi2 = new() {TimeStamp = DateTime.Now, Nimi = "Olli2", Teksti= "Terveppä terve2"};
-		// viestit.Add(Testi1);
-		// viestit.Add(Testi2);
 		DataCollectionView.ItemsSource = viestit;
 		
 	}
@@ -60,6 +57,14 @@ public partial class MainPage : ContentPage
         Int32.TryParse(receivedMessage, out int id);
 		dbHandler.LisaaViesti(viesti, id);
 		Console.WriteLine($"Received message: {receivedMessage}");
+	}
+/*
+*Metodiin vastauksen käsittely
+*/
+	public async void ViestiVertaus(int id){
+		string stringiksiId = id.ToString(); 
+		byte[] buffer = Encoding.UTF8.GetBytes(stringiksiId);
+		await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);		
 	}
 }
 

@@ -300,3 +300,15 @@ G:\Solution\chathuone\chathuone\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref
 G:\Solution\chathuone\chathuone\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ChatHuone.pdb
 G:\Solution\chathuone\chathuone\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ChatHuone.genruntimeconfig.cache
 G:\Solution\chathuone\chathuone\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\ChatHuone.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\EntityFramework.SqlServer.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\EntityFramework.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Win32.SystemEvents.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Data.SQLite.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.CodeDom.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Configuration.ConfigurationManager.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Data.SqlClient.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Data.SQLite.EF6.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Drawing.Common.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Security.Cryptography.ProtectedData.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Security.Permissions.dll
+G:\Solution\ChatHuone\ChatHuone\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\System.Windows.Extensions.dll
