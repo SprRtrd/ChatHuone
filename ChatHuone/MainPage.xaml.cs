@@ -57,7 +57,8 @@ public partial class MainPage : ContentPage
 		byte[] receiveBuffer = new byte[1024];
 		WebSocketReceiveResult receiveResult = await ws.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
 		string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, receiveResult.Count);
-		// dbHandler.LisaaViesti(viesti);
+        Int32.TryParse(receivedMessage, out int id);
+		dbHandler.LisaaViesti(viesti, id);
 		Console.WriteLine($"Received message: {receivedMessage}");
 	}
 }

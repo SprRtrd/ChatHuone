@@ -20,9 +20,9 @@ public class DatabaseHandler{
         command.ExecuteNonQuery();
     }
 
-    public void LisaaViesti(Viesti viesti){
+    public void LisaaViesti(Viesti viesti, int id){
         string sqlFormattedDate = viesti.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss");
-        string query = $"INSERT INTO viestit (lahettaja, viesti, timestamp) VALUES(\'{viesti.Nimi}\', \'{viesti.Teksti}\', \'{sqlFormattedDate}\')";
+        string query = $"INSERT INTO viestit (server_viesti_id, lahettaja, viesti, timestamp) VALUES(\'{id}\', \'{viesti.Nimi}\', \'{viesti.Teksti}\', \'{sqlFormattedDate}\')";
 
         try{
             using var connection = new SQLiteConnection(_connectionString);
