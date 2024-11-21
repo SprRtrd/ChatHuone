@@ -17,6 +17,8 @@ public partial class MainPage : ContentPage
 		
 		InitializeComponent();
 		dbHandler.CreateDatabase();
+		int viestiCount = dbHandler.ViimeisinId();
+		System.Console.WriteLine(viestiCount);
         _ = Yhdista();
 		
 		// Viesti Testi1 = new() {TimeStamp = DateTime.Now, Nimi = "Olli", Teksti= "Terveppä terve"};
