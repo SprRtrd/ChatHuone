@@ -9,7 +9,7 @@ namespace ChatHuone;
 public partial class MainPage : ContentPage
 {
 	static readonly HttpClient client = new();
-	ObservableCollection<Viesti> viestit = new();
+	ObservableCollection<ChatViesti> viestit = new();
 	ClientWebSocket ws = new();
 	static DatabaseHandler dbHandler = new();
 	public MainPage()
@@ -38,13 +38,13 @@ public partial class MainPage : ContentPage
 
 	void OnClick1 (object sender, EventArgs e){
 		
-		Viesti viesti = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
+		ChatViesti viesti = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
 		viestit.Add(viesti);
 		_ = LahetaViesti(viesti);
 		
 	}
 
-	async Task LahetaViesti (Viesti viesti){
+	async Task LahetaViesti (ChatViesti viesti){
 		
 		string jsonString = JsonSerializer.Serialize(viesti);
 

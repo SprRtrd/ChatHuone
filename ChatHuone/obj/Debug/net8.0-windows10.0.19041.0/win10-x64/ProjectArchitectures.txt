@@ -1,1 +1,0 @@
-G:\Solution\ChatHuone\ChatHuone\ChatHuone.csproj;x64

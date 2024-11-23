@@ -20,7 +20,7 @@ public class DatabaseHandler{
         command.ExecuteNonQuery();
     }
 
-    public void LisaaViesti(Viesti viesti, int id){
+    public void LisaaViesti(ChatViesti viesti, int id){
         string sqlFormattedDate = viesti.TimeStamp.ToString("yyyy-MM-dd HH:mm:ss");
         string query = $"INSERT INTO viestit (server_viesti_id, lahettaja, viesti, timestamp) VALUES(\'{id}\', \'{viesti.Nimi}\', \'{viesti.Teksti}\', \'{sqlFormattedDate}\')";
 
