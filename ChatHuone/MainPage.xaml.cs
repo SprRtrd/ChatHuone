@@ -17,11 +17,7 @@ public partial class MainPage : ContentPage
 		
 		InitializeComponent();
 		dbHandler.CreateDatabase();
-
-
-        _ = Yhdista();
-		// ViestiVertaus();
-		
+        _ = Yhdista();		
 		DataCollectionView.ItemsSource = viestit;
 		
 	}
@@ -33,7 +29,7 @@ public partial class MainPage : ContentPage
 		await ws.ConnectAsync(uri, CancellationToken.None);
 		// ws.ConnectAsync(uri, CancellationToken.None);
 		Console.WriteLine("Connected");
-
+		// ViestiVertaus();
 	}
 
 	void OnClick1 (object sender, EventArgs e){
@@ -57,7 +53,7 @@ public partial class MainPage : ContentPage
 		WebSocketReceiveResult receiveResult = await ws.ReceiveAsync(new ArraySegment<byte>(receiveBuffer), CancellationToken.None);
 		string receivedMessage = Encoding.UTF8.GetString(receiveBuffer, 0, receiveResult.Count);
         Int32.TryParse(receivedMessage, out int id);
-		dbHandler.LisaaViesti(viesti, id);
+		// dbHandler.LisaaViesti(viesti, id);
 		Console.WriteLine($"Received message: {receivedMessage}");
 	}
 /*
