@@ -17,10 +17,10 @@ public partial class MainPage : ContentPage
 		
 		InitializeComponent();
 		dbHandler.CreateDatabase();
-		int viestiCount = dbHandler.ViimeisinId();
-		System.Console.WriteLine(viestiCount);
+
+
         _ = Yhdista();
-		// ViestiVertaus(viestiCount);
+		// ViestiVertaus();
 		
 		DataCollectionView.ItemsSource = viestit;
 		
@@ -31,18 +31,17 @@ public partial class MainPage : ContentPage
 
 		Uri uri = new("ws://127.0.0.1:8080");
 		await ws.ConnectAsync(uri, CancellationToken.None);
-
+		// ws.ConnectAsync(uri, CancellationToken.None);
 		Console.WriteLine("Connected");
 
 	}
 
 	void OnClick1 (object sender, EventArgs e){
 		
-		// ChatViesti viesti = new() {TimeStamp = DateTime.Now, Nimi = LNimi.Text, Teksti = ChatViesti.Text};
 		string timeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		Dictionary<string, string> viesti = new() {{"Tyyppi", "Viesti"}, {"TimeStamp", timeStamp}, {"Nimi", LNimi.Text}, {"Teksti", ChatViesti.Text}};
 		viestit.Add(viesti);
-		_ = LahetaViesti(viesti);
+        _ = LahetaViesti(viesti);
 		
 	}
 
@@ -63,10 +62,13 @@ public partial class MainPage : ContentPage
 /*
 *Metodiin vastauksen käsittely
 */
-	public async void ViestiVertaus(int id){
-		string stringiksiId = id.ToString(); 
-		byte[] buffer = Encoding.UTF8.GetBytes(stringiksiId);
-		await ws.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, CancellationToken.None);		
+	public void ViestiVertaus(){
+		
+		int viestiCount = dbHandler.ViimeisinId();
+		string stringiksiId = viestiCount.ToString(); 
+		Dictionary<string, string> viesti = new() {{"Tyyppi", "Vertaus"}, {"Id", stringiksiId}};
+		_ = LahetaViesti(viesti);
+
 	}
 }
 
