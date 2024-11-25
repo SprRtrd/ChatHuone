@@ -15,11 +15,11 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column ="0"
-                        Text="{Binding TimeStamp}" />
+                        Text="{Binding [TimeStamp]}" />
                     <Label Grid.Column ="1"
-                        Text="{Binding Nimi}" />
+                        Text="{Binding [Nimi]}" />
                     <Label Grid.Column ="2"
-                        Text="{Binding Teksti}" />
+                        Text="{Binding [Teksti]}" />
                 </Grid>
             </DataTemplate>
         </CollectionView.ItemTemplate>

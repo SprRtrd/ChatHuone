@@ -40,6 +40,7 @@ public partial class MainPage : ContentPage
 		
 		string timeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		Dictionary<string, string> viesti = new() {{"Tyyppi", "Viesti"}, {"TimeStamp", timeStamp}, {"Nimi", LNimi.Text}, {"Teksti", ChatViesti.Text}};
+		string jsonString = JsonSerializer.Serialize(viesti);
 		viestit.Add(viesti);
         _ = LahetaViesti(viesti);
 		
