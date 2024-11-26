@@ -29,7 +29,7 @@ public partial class MainPage : ContentPage
 		await ws.ConnectAsync(uri, CancellationToken.None);
 		// ws.ConnectAsync(uri, CancellationToken.None);
 		Console.WriteLine("Connected");
-		// ViestiVertaus();
+		ViestiVertaus();
 	}
 
 	void OnClick1 (object sender, EventArgs e){
